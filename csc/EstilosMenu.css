@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-.main_background{
-    background-color: rgba(11, 10, 10, 0.544);
-}
+/*.main_background{
+    background-color: rgba(148, 17, 172, 0.784);
+}*/
 
 :root{
     --padding-container: 100px 0;
@@ -39,7 +39,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    height: 150%;
+    height: 141%;
     background-image: linear-gradient(180deg,#0000008c 0%, #0000008c 100%), url('../Imagenes/MenuApuestas.jpg');
     background-size: cover;
     clip-path: polygon(0 0, 100% 0%, 100% 71%, 0 71%);
@@ -99,7 +99,7 @@ body{
 
 .cta{
     display: inline-block;
-    background-color: #9116a742;
+    background-color: #ffffffc5;
     justify-self: center;
     color: #fff;
     text-decoration: none;
@@ -120,7 +120,7 @@ body{
 }
 
 .about_main{
-    padding-top: 80px;
+    padding-top: 50px;
     display: grid;
     width: 90%;
     margin: 0 auto;
@@ -161,6 +161,21 @@ body{
 .about_icon3{
     width: 180px;
     gap: 1em;
+
+}
+
+/* img_player */
+
+.img_player{
+    content: "";
+    position: absolute;
+    top: 1;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0%, 100% 91%, 0 91%);
+    z-index: -1;
 
 }
 
