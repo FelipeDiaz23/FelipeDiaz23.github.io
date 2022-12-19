@@ -172,9 +172,10 @@ body{
     top: 1;
     left: 0;
     width: 100%;
-    height: 70%;
+    height: 100%;
     background-size: cover;
     clip-path: polygon(0 0, 100% 0%, 100% 91%, 0 91%);
+    clip-path: polygon(75% 0%, 100% 0%, 75% 50%, 0% 50%, 0 46%, 0% 0%);
     z-index: -1;
 
 }
