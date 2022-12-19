@@ -88,7 +88,7 @@ body{
 }       
 
 .nav_menu{
-    display: block;
+    display: var(--show,none);
     width: 30px;
 }
 
@@ -132,7 +132,6 @@ body{
 
 .about{
     text-align: center;
-
 }
 
 .subtitle{
@@ -157,6 +156,20 @@ body{
     margin-bottom: 55px;
 }
 
+.about_icons{
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.about_icon{
+    width: 60px;
+    gap: 1em;
+
+}
 .about_icons{
     display: grid;
     gap: 1em;
