@@ -1,454 +1,617 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-/*.main_background{
-    background-color: rgba(148, 17, 172, 0.784);
-}*/
-
-:root{
-    --padding-container: 100px 0;
-    --color-title: #001A49;
-}
-
-body{
-    font-family: 'Poppins', sans-serif;
-}
-
-.hero_menu{
-    width: 100%;
-    height: 100vh;
-    min-height: 100px;
-    max-height: 100px;
-    position: relative;
-    display: grid;
-    grid-template-rows: 100px 1fr;
-    color: #fff;
-
-}
-.container{
-    width: 90%;
-    max-height: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: var(--pading-container);
-}
-
-
-.hero_menu::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 141%;
-    background-image: linear-gradient(180deg,#0000008c 0%, #0000008c 100%), url('../Imagenes/MenuApuestas.jpg');
-    background-size: cover;
-    clip-path: polygon(0 0, 100% 0%, 100% 71%, 0 71%);
-    z-index: -1;
-    
-
-}
-/* Nav */
-
-.nav{
-    --padding-container:0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-
-}
-
-.nav_title{
-    font-weight: 300;
-}
-
-
-.nav_link{
-    margin-left: auto;
-    padding: 0;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 2em;
-}
-
-.nav_items{
-    list-style: none;
-}
-
-
-.nav_links{
-    color: #fff;
-    text-decoration: none;
-}
-
-.nav_menu{
-    margin-left: auto;
-    cursor: pointer;
-    display: none;
-    display: inline-flex;
-}       
-
-.nav_menu{
-    display: var(--show,none);
-    width: 30px;
-}
-
-.nav_close{
-    display: var(--show, none);
-}
-
-.cta{
-    display: inline-block;
-    background-color: #2a2a2a8e;
-    justify-self: center;
-    color: #fff;
-    text-decoration: none;
-    padding: 20px 30px;
-    border-radius: 0px;
-}
-
-
-
-/*about */
-
-
-.subtitle{
-    margin-top: 50px;
-    color: var(--color-title);
-    font-size: 2rem;
-    margin-bottom: 25px;
-}
-
-.about_main{
-    padding-top: 50px;
-    display: grid;
-    width: 90%;
-    margin: 0 auto;
-    gap: 1em;
-    overflow: hidden;
-    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
-    margin-bottom: 55px;
-}
-
-.about_icons{
-    display: grid;
-    gap: 1em;
-    justify-items: center;
-    width: 260px;
-    overflow: hidden;
-    margin: 0 auto;
-}
-
-.about_icon{
-    margin-top: 17px;
-    width: 200px;
-    gap: 1em;
-}
-
-
-.about_icon1{
-    width: 170px;
-    gap: 1em;
-}
-
-.about_icon2{
-    margin-top: 18px;
-    width: 200px;
-    gap: 1em;
-
-}
-
-.about_icon3{
-    width: 180px;
-    gap: 1em;
-
-}
-
-/* img_player */
-
-.img_player{
-    content: "";
-    position: absolute;
-    top: 1;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    clip-path: polygon(75% 0%, 100% 0%, 75% 50%, 0% 50%, 0 46%, 0% 0%);
-    z-index: -1;    
-
-}
-
-
-
-/* QUESTIONS */
-
-.games{
-    margin-top: 250px;
-    text-align: center;
-}
-
-.games_container{
-    display: grid;
-    gap: 2em;
-    padding-top: 50px;
-    padding-bottom: 100px;
-}
-
-.games_padding{
-    padding: 0;
-    transition: padding .3s;
-    border: 1px solid #5454D4;
-    border-radius: 6px;
-}
-
-.games_padding--add{
-    padding-bottom: 30px;
-}
-
-.games_answer{
-    padding: 0 30px 0;
-    overflow: hidden;
-}
-
-.games_title{
-    display: flex;
-    font-size: 20px;
-    padding: 30px 0 30px;
-    cursor: pointer;
-    color: var(--color-title);
-    justify-content: space-between;
-}
-
-.games_arrow{
-    border-radius: 50%;
-    background-color: var(--color-title) ;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: flex-end;
-    margin-left: 10px;
-    transition: transform .3s;
-}
-
-.games_arrow--rotate{
-    transform: rotate(180deg);
-}
-
-.games_show{
-    text-align: left;
-    height: 0;
-    transition: height .3s;
-}
-
-.games_img{
-    display: block;
-}
-
-.games_copy{
-    width: 60%;
-    margin: 0 auto;
-    margin-bottom: 30px;
-}
-
-.games_offer{
-    margin-bottom: 60px;
-}
-
-/* ----------------------------------FOOTER--------------------------------------*/
-
-
-.footer{
-    background-color: #1d293F;
-}
-.footer_inputs{
-    margin-top: 10px;
-    display: flex;
-    overflow: hidden;
-}
-
-.footer_input{
-    background-color: #FFF;
-    height: 50px;
-    display: block;
-    padding-left: 10px;
-    border-radius: 6px;
-    font-size: 1rem;
-    outline: none;
-    border: none;
-    margin-right: 16px;
-}
-
-.footer_submit{
-    margin-left: auto;
-    display: inline-block;
-    height: 50px;
-    padding: 0 20px;
-    background-color: #2091F9;
-    border: none;
-    font-size: 1rem;
-    color: rgb(255, 255, 255) ;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.footer_copy{
-    --padding-container:30px 0;
-    text-align: center;
-    color: #FFF;
-}
-
-.footer_copyright{
-    font-weight: 300;
-}
-
-.footer_icons{
-    display: inline-flex;
-    margin-bottom: 10px;
-}
-
-.footer_img{
-    width: 30px;
-}
-
-
-
-/* Media queries*/
-
-@media (max-width:800px) {
-    .nav_menu{
-        display: block;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    /*.main_background{
+        background-color: rgba(148, 17, 172, 0.784);
+    }*/
+
+    :root{
+        --padding-container: 100px 0;
+        --color-title: #001A49;
     }
 
-    .nav_link--menu{
-        position: fixed ;
-        background-color: #000;
+    body{
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .hero_menu{
+        width: 100%;
+        height: 100vh;
+        min-height: 100px;
+        max-height: 100px;
+        position: relative;
+        display: grid;
+        grid-template-rows: 100px 1fr;
+        color: #fff;
+
+    }
+    .container{
+        width: 90%;
+        max-height: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: var(--pading-container);
+    }
+
+
+    .hero_menu::before{
+        content: "";
+        position: absolute;
         top: 0;
         left: 0;
-        height: 100%;
         width: 100%;
+        height: 141%;
+        background-image: linear-gradient(180deg,#0000008c 0%, #0000008c 100%), url('../Imagenes/MenuApuestas.jpg');
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0%, 100% 71%, 0 71%);
+        z-index: -1;
+        
+
+    }
+    /* Nav */
+
+    .nav{
+        --padding-container:0;
+        height: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
         align-items: center;
-        z-index: 100;
-        opacity: 0;
-        pointer-events: none;
-        transition: .7s opacity;
+
     }
 
-    .nav_link--show{
-        --show: block;
-        opacity:    1;
-        pointer-events: unset;
+    .nav_title{
+        font-weight: 300;
+    }
+
+
+    .nav_link{
+        margin-left: auto;
+        padding: 0;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        gap: 2em;
+    }
+
+    .nav_items{
+        list-style: none;
+    }
+
+
+    .nav_links{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .nav_menu{
+        margin-left: auto;
+        cursor: pointer;
+        display: none;
+        display: inline-flex;
+    }       
+
+    .nav_menu{
+        display: var(--show,none);
+        width: 30px;
     }
 
     .nav_close{
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        width: 30px;
-        cursor: pointer;
+        display: var(--show, none);
     }
 
-    .hero_title{
-        font-size: 2.5rem;
+    .cta{
+        display: inline-block;
+        background-color: #2a2a2a8e;
+        justify-self: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 20px 30px;
+        border-radius: 0px;
+    }
+
+
+
+    /*about */
+
+
+    .subtitle{
+        margin-top: 50px;
+        color: var(--color-title);
+        font-size: 2rem;
+        margin-bottom: 25px;
     }
 
     .about_main{
-        gap: 2em;
+        padding-top: 180px;
+        display: grid;
+        width: 90%;
+        margin: 0 auto;
+        gap: 1em;
+        overflow: hidden;
+        grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+        margin-bottom: 55px;
+    }
+
+    .about_icons{
+        display: grid;
+        gap: 1em;
+        justify-items: center;
+        width: 260px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .about_icon{
+        margin-top: 17px;
+        width: 200px;
+        gap: 1em;
+    }
+
+
+    .about_icon1{
+        width: 170px;
+        gap: 1em;
+    }
+
+    .about_icon2{
+        margin-top: 18px;
+        width: 200px;
+        gap: 1em;
 
     }
 
-    .about_icons:last-of-type{
-        grid-column: 1/-1;
+    .about_icon3{
+        width: 180px;
+        gap: 1em;
+
     }
 
-    .price_element{
-        width: 300px;
+    /* img_blackground */
+
+    .img_blackground{
+        content: "";
+        position: absolute;
+        top: 1;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        clip-path: polygon(75% 0%, 100% 0%, 85% 50%, 0% 50%, 0 46%, 0% 0%);
+        z-index: -1;    
+
     }
 
-    .price_element--best{
-        width: 330px;
-    }
 
-    .knowledge_container{
-        grid-template-columns: 1fr;
-        grid-template-rows:max-content 1fr;
-        gap: 3em;
+    /* QUESTIONS */
+
+    .games{
+        margin-top: 150px;
         text-align: center;
     }
 
-    .knowledge_picture{
-        grid-row: 1/2;
-        justify-self: center;
+    .games_container{
+        display: grid;
+        gap: 2em;
+        padding-top: 10px;
+        padding-bottom: 50px;
     }
 
-    .testimony_container{
-        grid-template-columns: 30px 1fr 30px;
+    .games_padding{
+        padding: 0;
+        transition: padding .3s;
+        border: 1px solid #5454D4;
+        border-radius: 4px;
     }
 
-    .testimony_body{
-        grid-template-columns: 1fr;
-        grid-template-rows: max-content max-content;
-        gap: 3em;
-        justify-items: center;
+    .games_padding--add{
+        padding-bottom: 30px;
     }
 
-    .games_copy{
-        width: 100%;
+    .games_answer{
+        padding: 0 10px 0;
+        overflow: hidden;
     }
-
-    .footer_container{
-        flex-wrap: wrap;
-    }
-
-    .nav--footer{
-        width: 100%;
-        justify-items: center;
-    }
-
-    .nav_link--footer{
-        width: 100%;
-        justify-content: space-evenly;
-        margin: 0;
-    }
-
-    .footer_form{
-        width: 100%;
-        justify-content: space-evenly;
-    }
-
-    .footer_input{
-        flex: 1;
-    }
-}
-
-@media (max-width:600px) {
 
     .games_title{
-        text-align: left;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px 0 20px;
+        color: var(--color-title);
+        justify-content: space-between;
+    }
+    
+
+    .games_copy{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 30px;
     }
 
-    .price_element{
-        width: 240px
+    .games_offer{
+        margin-bottom: 60px;
     }
 
-    .price_element--best{
-        width: 250px;
+    .games_img{
+        margin-left:30vmax;
+        width: 30px;
+        height: 30px;
     }
 
-    .hero_title{
-        font-size: 2rem;
+    .games__img{
+        margin-right:30vmax;
+        width: 30px;
+        height: 30px;
     }
 
-    .hero_paragraph{
-        font-size: 1rem;
-    }
+    /* Prices */
 
-    .subtitle{
-        font-size: 1.8rem;
-    }
+.price{
+    text-align: center;
 }
+
+.price_table{
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.price_element{
+    background-color:#C0C0C0;
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    --color-plan: #11075c;
+    --color-price: #1D293F;
+    --bg-cta: #fff;
+    --color-cta: #5454D4;
+    --color-items: rgb(57, 46, 46);
+}
+
+.price_element--best{
+    width: 370px;
+    padding: 50px 30px;
+    background-color: #efb810;
+    --color-plan: #11075c;
+    --color-price: #fff;
+    --bg-cta: #9F3919;
+    --color-cta: #FFF;
+    --color-items: rgb(57, 46, 46);
+}
+
+
+.price_name{
+    color: var(--color-plan);
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.price_price{
+    font-size: 2.5rem;
+    color: var(--color-price);
+}
+
+.price_items{
+    margin-top: 35px;
+    display: grid;
+    gap: 1em;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: var(--color-items);
+}
+.players_img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    display: flex;
+}
+
+ /* ----------------------------------MAP--------------------------------------*/
+
+
+
+
+.map{
+    text-align: center;
+}
+
+.map_table{
+    padding-top: 60px;
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.map_element{
+    background-color:#C0C0C0;
+    text-align: left;
+    width: 820px;
+    padding: 10px;
+    --color-plan: #11075c;
+    --color-price: #1D293F;
+    --bg-cta: #fff;
+    --color-cta: #5454D4;
+    --color-items: rgb(57, 46, 46);
+}
+.map_element1{
+    background-color:#C0C0C0;
+    text-align: left;
+    width: 800px;
+    padding: 10px;
+    --color-plan: #11075c;
+    --color-price: #1D293F;
+    --bg-cta: #fff;
+    --color-cta: #5454D4;
+    --color-items: rgb(57, 46, 46);
+}
+
+
+
+.map_img{
+    width: 800px;
+    height: 500px;
+    vertical-align: auto;
+}
+
+
+    /* ----------------------------------FOOTER--------------------------------------*/
+
+
+.footer{
+        background-color: #1d293F;
+}
+.footer_inputs{
+        margin-top: 10px;
+        display: flex;
+        overflow: hidden;
+}
+
+.footer_input{
+        background-color: #FFF;
+        height: 50px;
+        display: block;
+        padding-left: 10px;
+        border-radius: 6px;
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        margin-right: 16px;
+}
+
+.footer_submit{
+        margin-left: auto;
+        display: inline-block;
+        height: 50px;
+        padding: 0 20px;
+        background-color: #2091F9;
+        border: none;
+        font-size: 1rem;
+        color: rgb(255, 255, 255) ;
+        border-radius: 6px;
+        cursor: pointer;
+}
+
+.footer_copy{
+        --padding-container:30px 0;
+        text-align: center;
+        color: #FFF;
+}
+
+.footer_copyright{
+        font-weight: 300;
+}
+
+    .footer_icons{
+        display: inline-flex;
+        margin-bottom: 10px;
+    }
+
+    .footer_img{
+        width: 30px;
+    }
+
+
+
+    /* Media queries*/
+
+    @media (max-width:800px) {
+        .nav_menu{
+            display: block;
+        }
+
+        .nav_link--menu{
+            position: fixed ;
+            background-color: #000;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+            transition: .7s opacity;
+        }
+
+        .nav_link--show{
+            --show: block;
+            opacity:    1;
+            pointer-events: unset;
+        }
+
+        .nav_close{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 30px;
+            cursor: pointer;
+        }
+
+        .hero_title{
+            font-size: 2.5rem;
+        }
+
+        .about_main{
+            gap: 2em;
+
+        }
+
+        .about_icons:last-of-type{
+            grid-column: 1/-1;
+        }
+
+        .price_element{
+            width: 300px;
+        }
+
+        .price_element--best{
+            width: 330px;
+        }
+
+        .knowledge_container{
+            grid-template-columns: 1fr;
+            grid-template-rows:max-content 1fr;
+            gap: 3em;
+            text-align: center;
+        }
+
+        .knowledge_picture{
+            grid-row: 1/2;
+            justify-self: center;
+        }
+
+        .testimony_container{
+            grid-template-columns: 30px 1fr 30px;
+        }
+
+        .testimony_body{
+            grid-template-columns: 1fr;
+            grid-template-rows: max-content max-content;
+            gap: 3em;
+            justify-items: center;
+        }
+
+        .games_copy{
+            width: 100%;
+        }
+
+        .footer_container{
+            flex-wrap: wrap;
+        }
+
+        .nav--footer{
+            width: 100%;
+            justify-items: center;
+        }
+
+        .nav_link--footer{
+            width: 100%;
+            justify-content: space-evenly;
+            margin: 0;
+        }
+
+        .footer_form{
+            width: 100%;
+            justify-content: space-evenly;
+        }
+
+        .footer_input{
+            flex: 1;
+        }
+    }
+
+    @media (max-width:600px) {
+
+        .games_title{
+            text-align: left;
+        }
+
+        .price_element{
+            width: 240px
+        }
+
+        .price_element--best{
+            width: 250px;
+        }
+
+        .hero_title{
+            font-size: 2rem;
+        }
+
+        .hero_paragraph{
+            font-size: 1rem;
+        }
+
+        .subtitle{
+            font-size: 1.8rem;
+        }
+    }
+
+    @media (max-width:400px) {
+
+
+        .about_main{
+            padding-top: 70px;
+        }
+
+      .img_blackground{
+        content: "";
+        position: absolute;
+        top: 1;
+        left: 0;
+        width: 150%;
+        height: 150%;
+        background-size: cover;
+        clip-path: polygon(75% 0%, 100% 0%, 55% 50%, 0% 50%, 0 46%, 0% 0%);
+        z-index: -1;    
+     }
+     .games_title{
+        text-align: center;
+        font-size: 15px;
+    }
+
+
+    .games_img{
+        margin-left:2vmax;
+        width: 20px;
+        height: 20px;
+    }
+
+    .games__img{
+        margin-right:2vmax;
+        width: 20px;
+        height: 20px;
+    }
+
+
+
+        .games_title{
+            text-align: left;
+        }
+
+        .price_element{
+            width: 240px
+        }
+
+        .price_element--best{
+            width: 250px;
+        }
+
+        .hero_title{
+            font-size: 2rem;
+        }
+
+        .hero_paragraph{
+            font-size: 1rem;
+        }
+
+        .subtitle{
+            font-size: 1.8rem;
+        }
+    }
+
