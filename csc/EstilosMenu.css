@@ -178,6 +178,17 @@
         z-index: -1;    
 
     }
+    .img_blackground2{
+        content: "";
+        position: absolute;
+        top: 1;
+        left: 0;
+        width: 100%;
+        height: 75%;
+        clip-path: polygon(75% 0%, 100% 0%, 100% 100%, 0% 100%, 0 46%, 0% 0%);
+        z-index: -1;    
+
+    }
 
 
     /* QUESTIONS */
@@ -268,6 +279,8 @@
     --bg-cta: #fff;
     --color-cta: #5454D4;
     --color-items: rgb(57, 46, 46);
+    margin-bottom: 50px;
+    display: grid;
 }
 
 .price_element--best{
@@ -303,11 +316,21 @@
     color: var(--color-items);
 }
 .players_img{
+    margin-left: 50px;
     width: 150px;
     height: 150px;
     border-radius: 100px;
     display: flex;
 }
+
+.players__img{
+    margin-left: 80px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    display: flex;
+}
+
 
  /* ----------------------------------MAP--------------------------------------*/
 
@@ -325,35 +348,52 @@
 }
 
 .map_element{
-    background-color:#C0C0C0;
+    margin-left: 100px;
+    background-color: #000000;
     text-align: left;
-    width: 820px;
+    width: 920px;
+    height: 520px;
     padding: 10px;
     --color-plan: #11075c;
     --color-price: #1D293F;
     --bg-cta: #fff;
     --color-cta: #5454D4;
     --color-items: rgb(57, 46, 46);
+    border-radius: 10px;
 }
 .map_element1{
-    background-color:#C0C0C0;
-    text-align: left;
-    width: 800px;
+    margin-top: 0px;
+    background-color:#afaf00ba;
+    width: 495px;
+    height: 520px;
     padding: 10px;
     --color-plan: #11075c;
     --color-price: #1D293F;
     --bg-cta: #fff;
     --color-cta: #5454D4;
     --color-items: rgb(57, 46, 46);
+    border-radius: 20px;
 }
 
 
 
 .map_img{
-    width: 800px;
+    width: 900px;
     height: 500px;
     vertical-align: auto;
 }
+
+.map_resultado{
+    margin-top: 47px;
+    height: 100px;
+    width: 472px;
+}
+
+.img_map{
+    margin-top: 15px;
+}
+
+
 
 
     /* ----------------------------------FOOTER--------------------------------------*/
